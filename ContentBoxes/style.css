@@ -1,0 +1,87 @@
+:root {
+    --text-color: orange;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: darkorange;
+}
+
+.container {
+    position: relative;
+    width: 1200px;
+    height: 300px;
+    margin: 240px auto;
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: #5e1313;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container .box .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #FFE4C0;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.container .box:hover .icon {
+    top: 20px;
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.2s;
+    color: var(--text-color);
+}
+
+.container .box:hover .icon .fa {
+    font-size: 40px;
+}
+
+.container .box .content {
+    position: absolute;
+    top: 100%;
+    height: calc(100% - 100px);
+    text-align: center;
+    opacity: 0;
+}
+
+.container .box:hover .content {
+    top: 100px;
+    opacity: 1;
+}
+
+.container .box .content h3 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.container .box .content p {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
