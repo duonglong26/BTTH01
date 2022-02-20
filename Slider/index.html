@@ -1,0 +1,133 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image slider</title>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+            <div class="slide first">
+                <img src="newyork.jpg" alt="">
+            </div>
+
+            <div class="slide first">
+                <img src="paris.jpg" alt="">
+            </div>
+
+            <div class="slide first">
+                <img src="sanfran.jpg" alt="">
+            </div>
+
+            <div class="slide first">
+                <img src="chicago.jpg" alt="">
+            </div>
+
+            <div class="navigation-auto">
+                <div class="auto-btn1" onclick="changeImg('radio1')"></div>
+                <div class="auto-btn2" onclick="changeImg('radio2')"></div>
+                <div class="auto-btn3" onclick="changeImg('radio3')"></div>
+                <div class="auto-btn4" onclick="changeImg('radio4')"></div>
+            </div>
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <script>
+        changeImg = (indexRadio) => {
+            console.log(indexRadio)
+            document.getElementById(indexRadio).checked = true;
+        }  
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Image Slider</title>
+</head>
+
+<body>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">
+
+
+            <div class="first ">
+                <img src="newyork.jpg" alt="">
+            </div>
+
+            <div class="slide ">
+                <img src="paris.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="sanfran.jpg" alt="">
+            </div>
+
+            <div class="slide">
+                <img src="chicago.jpg" alt="">
+            </div>
+
+
+            <div class="navigation-auto">
+                <div class="auto-btn1" onclick="changeImg('radio1')"></div>
+                <div class="auto-btn2" onclick="changeImg('radio2')"></div>
+                <div class="auto-btn3" onclick="changeImg('radio3')"></div>
+                <div class="auto-btn4" onclick="changeImg('radio4')"></div>
+            </div>
+
+
+        </div>
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+    </div>
+    <script>
+        changeImg = (indexRadio) => {
+            document.getElementById(indexRadio).checked = true;
+            counter = indexRadio.slice(-1);
+        }
+    
+        var counter = 1;
+        setInterval(function () {
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if (counter > 4) {
+                counter = 1;
+            }
+        }, 2000);
+    </script>
+
+    abcd
+</body>
+
+
+
+</html>
